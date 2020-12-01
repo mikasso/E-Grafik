@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="299.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FxControllers.SymbolsMenuController">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="299.0" prefWidth="350.0">
+          <top>
+              <Label prefHeight="37.0" prefWidth="132.0" text="Ustaw symbole dni pracy" BorderPane.alignment="CENTER"> </Label>
+          </top>
+
+          <center>
+              <BorderPane>
+                  <top>
+                          <ListView fx:id="symbolsListView" editable="true" prefHeight="240.0" prefWidth="295.0" BorderPane.alignment="CENTER" />
+                  </top>
+                  <center>
+                      <GridPane prefHeight="55.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES"  />
+                              <ColumnConstraints hgrow="SOMETIMES" />
+                              <ColumnConstraints hgrow="SOMETIMES" />
+                              <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                          </rowConstraints>
+                          <children>
+                              <Label text="Znak symbolu" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                              <Label text="Ilośc godzin" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                              <Label text="Kolor" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                              <TextField fx:id="symbolChar" prefHeight="25.0" maxWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                              <TextField fx:id="symbolValue"  prefHeight="25.0" maxWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="colorValue"  prefHeight="25.0" maxWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#addSymbol" text="Dodaj" BorderPane.alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                              <Button mnemonicParsing="false" onAction="#deleteSymbol" text="Usuń" BorderPane.alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                          </children>
+                      </GridPane>
+                  </center>
+              </BorderPane>
+          </center>
+
+      </BorderPane>
+   </children>
+</AnchorPane>

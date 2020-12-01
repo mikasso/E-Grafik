@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FxControllers.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%menu.file">
+              <items>
+                  <MenuItem onAction="#chooseMonthFileToLoad" text="%menu.item.add.open.month"/>
+              </items>
+              <items>
+                <MenuItem onAction="#showAddNewMonth" text="%menu.item.add.new.month"/>
+              </items>
+              <items>
+                  <MenuItem onAction="#chooseMonthFileToSave" text="%menu.item.save.month"/>
+              </items>
+              <items>
+                  <MenuItem  text="%menu.item.print.month"/>
+              </items>
+          </Menu>
+
+          <Menu mnemonicParsing="false" text="%menu.settings">
+            <items>
+              <MenuItem onAction="#showSymbolsSettings" mnemonicParsing="false" text="%menu.item.symbols" />
+          </items>
+          </Menu>
+
+            <Menu mnemonicParsing="false" text="%menu.workers.list">
+                <items>
+                    <MenuItem onAction="#showWorkersList" text="%menu.workers.list.edit" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: lightgray;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <TabPane fx:id="monthsTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+        <tabs>
+
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
